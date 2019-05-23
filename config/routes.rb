@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     resources :bookings, only: [ :index]
   end
 
-  resources :bookings, only: [ :index]
+  get '/bookings', to: 'bookings#works', as: 'my_bookings'
 
 
   root to: 'pages#home'
