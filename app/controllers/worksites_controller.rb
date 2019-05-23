@@ -1,6 +1,6 @@
 class WorksitesController < ApplicationController
   def index
-    @worksites = Worksite.all.order(:start_date)
+    @worksites = Worksite.all
   end
 
   def show
