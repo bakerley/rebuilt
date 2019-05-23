@@ -9,6 +9,9 @@ gem 'rails', '5.2.3'
 gem 'redis'
 
 gem 'autoprefixer-rails'
+gem 'carrierwave'
+gem 'devise'
+gem 'dotenv-rails', groups: [:development, :test]
 gem 'font-awesome-sass', '~> 5.6.1'
 gem 'sassc-rails'
 gem 'simple_form'
@@ -28,4 +31,3 @@ group :development, :test do
   gem 'dotenv-rails'
 end
 
-gem 'devise'

@@ -1,7 +1,16 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+"Creating two users"
+User.create(email: "proprio@montagu.fr")
+User.create(email: "tony@worker.net")
+
+"Creating a castle"
+name = "Chateau de Montagu"
+description = "Un samedi par mois, de 9h à 17h, venez entretenir les ruines du château de Montagu : desherbage, délierrage, nettoyage du site, entretien des vestiges, restauration de mobilier archéologique, taille de pierre."
+address = "Montagu"
+castle = Worksite.new(name: name, description: description, address: address)
+castle.user = User.find(1)
+castle.save
+
+"Creating a booking"
+booking = Booking.new(start_date: "01/07/2019", end_date: "15/07/2019")
+booking.user = User.find(2)
+booking.Worksite = Worksite.find(1)
