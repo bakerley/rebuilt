@@ -1,5 +1,6 @@
 class WorksitesController < ApplicationController
   def index
+    @worksites = Worksite.all
   end
 
   def show

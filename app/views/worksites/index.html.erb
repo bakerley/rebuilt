@@ -1,2 +1,14 @@
 <h1>Worksites#index</h1>
 <p>Find me in app/views/worksites/index.html.erb</p>
+
+<% @worksites.each do |worksite| %>
+  <a href="<%= "/worksites/#{worksite.id}" %>" class="text-undecorated">
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="<%= cl_image_path worksite.photo, height: 300, width: 400, crop: :fill %>" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title"><%= worksite.name %></h5>
+        <p class="card-text"><%= worksite.address %></p>
+      </div>
+    </div>
+  </a>
+<% end %>
