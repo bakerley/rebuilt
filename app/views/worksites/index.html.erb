@@ -1,5 +1,4 @@
 <h1>Worksites#index</h1>
-<p>Find me in app/views/worksites/index.html.erb</p>
 
 <% @worksites.each do |worksite| %>
   <a href="<%= "/worksites/#{worksite.id}" %>" class="text-undecorated">
@@ -12,3 +11,5 @@
     </div>
   </a>
 <% end %>
+
+<%= link_to 'kill', destroy_user_session_path, method: :delete  %>

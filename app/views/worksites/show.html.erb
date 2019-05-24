@@ -1,2 +1,9 @@
 <h1>Worksites#show</h1>
 <p>Find me in app/views/worksites/show.html.erb</p>
+<p><%= @worksite.name %></p>
+
+  <% if policy(@worksite).edit? %>
+    <%= link_to "Update", edit_worksite_path(@worksite), class: 'btn btn-primary' %>
+    <%= link_to "Delete", worksite_path(@worksite), method: :delete, class: 'btn btn-secondary' %>
+
+  <% end %>
