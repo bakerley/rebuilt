@@ -14,3 +14,5 @@ yarn-error.log
 .byebug_history
 .env*
 .env
+.env*
+.env*

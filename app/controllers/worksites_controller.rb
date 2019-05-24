@@ -4,6 +4,7 @@ class WorksitesController < ApplicationController
   end
 
   def show
+    @worksite = Worksite.find(params[:id])
   end
 
   def new
