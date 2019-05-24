@@ -1,0 +1,5 @@
+<%= simple_form_for [@worksite, @booking] do |f| %>
+  <%= f.input :start_date %>
+  <%= f.input :end_date %>
+  <%= f.submit "book", class: "btn btn-primary" %>
+<% end %>
