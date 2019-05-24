@@ -1,21 +1,20 @@
-  <div class="container mt-5">
-    <h1>Tous nos chantiers</h1>
-    <div class="cards">
-      <% @worksites.each do |worksite| %>
-            <div class="card">
-              <img class="card-img-top" src="<%= cl_image_path worksite.photo, height: 500, width: 700, crop: :fill %>" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title"><%= worksite.name %></h5>
-                <p class="card-text"><%= worksite.address %></p>
-                <a href="<%= "/worksites/#{worksite.id}" %>" class="text-undecorated">
-                <button type="button" class="btn btn-primary">Voir la description</button>
-                </a>
-              </div>
-            </div>
+<div class="container mt-5">
+  <h1>Tous nos chantiers</h1>
 
-      <% end %>
-    </div>
+  <div class="cards">
+    <% @worksites.each do |worksite| %>
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= cl_image_path worksite.photo, height: 300, width: 700, crop: :fill %>)">
+          <div class="card-body">
+            <h5 class="card-title"><%= worksite.name %></h5>
+            <p class="card-text"><%= worksite.address %></p>
+              <a href="<%= "/worksites/#{worksite.id}" %>" class="text-undecorated">
+                <button type="button" class="btn btn-primary">Voir la description</button>
+              </a>
+          </div>
+      </div>
+    <% end %>
   </div>
+</div>
 
 
 
@@ -30,4 +29,5 @@
   </div> -->
 
 <!--   <div class="card" style="width: 18rem;"> -->
+
 

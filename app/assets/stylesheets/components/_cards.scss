@@ -10,6 +10,7 @@ h1 {
   font-weight: lighter;
   color: rgb (50, 50, 50);
   padding-bottom: 50px;
+  color: #305f72;
 }
 
 .container {
@@ -27,4 +28,19 @@ text-align: center;
   padding: 30px;                             /* Internal space */
   border-radius: 4px;                        /* Small radius */
   box-shadow: 0 10px 30px rgba(0,0,0,.1);
+}
+
+.btn {
+  background-color: #305f72;
+  border-color: #305f72;
+}
+
+.btn:hover{
+  background-color: #247BA0;
+  border-color: #247BA0;
+}
+
+.card-body {
+  color: white;
+  font-family: 'Roboto', sans-serif;
 }
