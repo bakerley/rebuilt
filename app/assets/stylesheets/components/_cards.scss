@@ -1,0 +1,30 @@
+.index {
+  padding-top: 200px;
+  background-color: rgb(240, 240, 240)
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  text-align : center;
+  font-weight: lighter;
+  color: rgb (50, 50, 50);
+  padding-bottom: 50px;
+}
+
+.container {
+text-align: center;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.card {
+  background: white;                         /* White background */
+  padding: 30px;                             /* Internal space */
+  border-radius: 4px;                        /* Small radius */
+  box-shadow: 0 10px 30px rgba(0,0,0,.1);
+}
