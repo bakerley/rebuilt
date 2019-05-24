@@ -7,6 +7,7 @@ class WorksitesController < ApplicationController
   def show
     @worksite = Worksite.find(params[:id])
     authorize @worksite
+
   end
 
   def new

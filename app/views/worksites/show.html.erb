@@ -1,9 +1,16 @@
-<h1>Worksites#show</h1>
-<p>Find me in app/views/worksites/show.html.erb</p>
-<p><%= @worksite.name %></p>
+<div class="card-trip">
+  <img src="<%= cl_image_path @worksite.photo, height: 300, width: 400, crop: :fill %>" alt="Card image cap">
+  <div class="card-trip-infos container">
+    <div class="description">
+      <h1><%= @worksite.name %></h1>
+      <p><%= @worksite.description %></p>
+    </div>
+    <img src='../../assets/camille.jpg' class="card-trip-user avatar-bordered"/>
+  </div>
+  <div class="carte">
+    <img id="map" src='https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/2.3381,48.8693,10.45,0,0/930x300?access_token=pk.eyJ1Ijoibmljb2xhc2NoaWNhbiIsImEiOiJjanZkcjRxbTUwNXI2NDVvdWR6Zm5mOWV6In0.5TmGyZQZyDv33XQudjiS8g'>
+  </div>
+</div>
+<%= link_to "Update", edit_worksite_path(@worksite), class: 'btn btn-primary' if policy(@worksite).edit? %>
+<%= link_to "Delete", worksite_path(@worksite), method: :delete, class: 'btn btn-secondary' if policy(@worksite).edit? %>
 
-  <% if policy(@worksite).edit? %>
-    <%= link_to "Update", edit_worksite_path(@worksite), class: 'btn btn-primary' %>
-    <%= link_to "Delete", worksite_path(@worksite), method: :delete, class: 'btn btn-secondary' %>
-
-  <% end %>

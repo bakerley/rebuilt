@@ -13,6 +13,10 @@
   color: white;
 }
 
+.navbar-light .navbar-nav .active > .nav-link {
+  color: white;
+}
+
 .img {
   width: 100px;
 }
@@ -21,6 +25,8 @@
   position: fixed;
   z-index: 2;
   width: 100vw;
+  position: sticky;
+  top: 0;
 }
 
 .nav-item a {
@@ -32,6 +38,11 @@
   padding-right: 20px;
 }
 
-.nav-item {
+.nav-link {
   color: white;
 }
+
+.navbar-light .navbar-nav .nav-link {
+  color: white;
+}
+

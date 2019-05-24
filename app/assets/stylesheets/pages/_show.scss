@@ -1,0 +1,79 @@
+
+.card-trip {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.description {
+  background: white;                         /* White background */
+  padding: 30px;                             /* Internal space */
+  border-radius: 4px;                        /* Small radius */
+  box-shadow: 0 10px 30px rgba(0,0,0,.1);
+}
+
+.card-trip > img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-trip-infos h1 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-weight: bold;
+}
+
+.card-trip h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-trip p {
+  font-size: 12px;
+  opacity: .7;
+}
+
+.avatar-bordered {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+
+}
+
+
+.card-trip .card-trip-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.card-trip-infos .card-trip-user {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
+}
+
+#map {
+ width: auto;
+ height: auto;
+ object-fit: cover;
+ background: white;                         /* White background */                            /* Internal space */
+ border-radius: 4px;                        /* Small radius */
+ box-shadow: 0 10px 30px rgba(0,0,0,.1);
+}
+
+.carte {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.container {
+  padding-left: 30px;
+  padding-right: 30px;
+}
