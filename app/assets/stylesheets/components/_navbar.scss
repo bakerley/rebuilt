@@ -25,6 +25,8 @@
   position: fixed;
   z-index: 2;
   width: 100vw;
+  position: sticky;
+  top: 0;
 }
 
 .nav-item a {
