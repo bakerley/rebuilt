@@ -7,6 +7,7 @@ class WorksitesController < ApplicationController
   end
 
   def new
+    @worksite = Worksite.new
   end
 
   def create
