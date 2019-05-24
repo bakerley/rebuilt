@@ -4,6 +4,11 @@
   }
 }
 
+.carousel-caption {
+  position: absolute;
+  top: 70px;
+}
+
 .carousel-caption h1 {
   margin-bottom: 40px;
 }
@@ -39,7 +44,7 @@
 }
 
 .search-form-control .form-control:focus {
-  border: 1px solid #1EDD88;
+  border: 1px solid white;
   outline: none !important;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
@@ -50,6 +55,17 @@
   border-radius: 4px;
   background: #1EDD88;
   transition: background 0.3s ease;
+}
+
+.create_project a {
+  color: white;
+  text-decoration: underline;
+}
+
+.create_project {
+  padding-bottom: 40px;
+  margin-top: 0px;
+  padding-top: 0px;
 }
 
 .btn-flat:hover {
