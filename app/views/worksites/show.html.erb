@@ -11,6 +11,12 @@
     <img id="map" src='https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/2.3381,48.8693,10.45,0,0/930x300?access_token=pk.eyJ1Ijoibmljb2xhc2NoaWNhbiIsImEiOiJjanZkcjRxbTUwNXI2NDVvdWR6Zm5mOWV6In0.5TmGyZQZyDv33XQudjiS8g'>
   </div>
 </div>
-<%= link_to "Update", edit_worksite_path(@worksite), class: 'btn btn-primary' if policy(@worksite).edit? %>
-<%= link_to "Delete", worksite_path(@worksite), method: :delete, class: 'btn btn-secondary' if policy(@worksite).edit? %>
+<div>
+<p>
+  <%= link_to "Update", edit_worksite_path(@worksite) if policy(@worksite).edit? %>
+</p>
+<p>
+<%= link_to "Delete", worksite_path(@worksite), method: :delete if policy(@worksite).edit? %>
+</p>
+</div>
 
