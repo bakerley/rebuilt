@@ -5,4 +5,9 @@
     <li> du <%= booking.start_date %> au <%= booking.end_date %> </li>
     <li>propriétaire : <%= booking.worksite.user.email %> </li>
   </ul>
+  <%= link_to "modifier", edit_worksite_booking_path(booking.worksite, booking)  %>
+  <%= link_to "supprimer", worksite_booking_path(booking.worksite, booking),
+    method: :delete,
+    data: { confirm: "Êtes vous sûr de supprimer cette réservation?" }
+  %>
 <% end %>
