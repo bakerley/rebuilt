@@ -1,30 +1,23 @@
-.navbar-lewagon {
+.navbar {
   justify-content: space-between;
   background: transparent;
+  position: fixed;
+  z-index: 2;
+  width: 100vw;
+  color: white;
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
+.navbar img {
   width: 80px;
   padding-left: 25px;
-  color: white;
 }
 
 .navbar-light .navbar-nav .active > .nav-link {
   color: white;
-}
-
-.img {
-  width: 100px;
-}
-
-.navbar {
-  position: fixed;
-  z-index: 2;
-  width: 100vw;
 }
 
 .nav-item a {

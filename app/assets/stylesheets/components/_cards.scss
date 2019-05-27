@@ -3,7 +3,7 @@
   background-color: rgb(240, 240, 240)
 }
 
-h1 {
+#title-worksite h1 {
   padding-top: 150px;
   text-align: center;
   font-family: 'Roboto', sans-serif;
@@ -25,6 +25,7 @@ h1 {
   padding: 30px;                             /* Internal space */
   border-radius: 4px;                        /* Small radius */
   box-shadow: 0 10px 30px rgba(0,0,0,.1);
+  text-align: center;
 }
 
 
