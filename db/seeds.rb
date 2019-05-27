@@ -7,10 +7,10 @@ puts "Deleting db"
 
 
 puts "Creating 4 users"
-user_1 = User.create(email: "proprio@montagu.fr", password: "123456")
-user_2 = User.create(email: "tony@worker.net", password: "123456")
-user_3 = User.create(email: "hello@gmail.com", password: "123456")
-user_4 = User.create(email: "goodbye@gmail.com", password: "123456")
+user_1 = User.create(email: "proprio@montagu.fr", password: "123456", first_name: "Monsieur", last_name: "de Montagu")
+user_2 = User.create(email: "tony@worker.net", password: "123456", first_name: "Tony", last_name: "Rambouille")
+user_3 = User.create(email: "John.rambo@gmail.com", password: "123456", first_name: "John", last_name: "Rambo")
+user_4 = User.create(email: "Pierre.Quiroule@gmail.com", password: "123456", first_name: "Pierre", last_name: "Quiroule")
 
 puts "Creating 5 worksites"
 worksite_1 = Worksite.new(name: "Atelier ouvert en ébénisterie", address: "Nouvelle-Aquitaine", description: "Vous souhaitez travailler le bois en atelier dans le cadre d'un projet bénévole, d'une validation de stage ou d'un projet professionnel ? Pendant l'année scolaire, le Club Marpen vous accueille pour une initiation à l'ébénisterie, à la menuiserie et à la restauration de bois, selon votre projet.")
