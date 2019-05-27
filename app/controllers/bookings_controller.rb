@@ -1,8 +1,8 @@
 class BookingsController < ApplicationController
   before_action :set_worksite, only: [:index, :new, :create]
   def index
-    @worksite = Worksite.find(params[:worksite_id])
-    @worksites = policy_scope(Booking)
+    raise
+    @worksite = policy_scope(Booking)
     @bookings = @worksite.bookings
   end
 
@@ -14,6 +14,9 @@ class BookingsController < ApplicationController
   def new
     @booking = Booking.new
     authorize @booking
+  end
+
+  def edit
   end
 
   def create
@@ -30,8 +33,9 @@ class BookingsController < ApplicationController
 
   def destroy
     @booking = Booking.find(params[:id])
+    authorize @booking
     @booking.destroy
-    redirect_to my_bookings
+    redirect_to my_bookings_path
   end
 
   private
