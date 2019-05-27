@@ -46,26 +46,26 @@ worksite_5.save!
 
 puts "Creating five bookings in chateau de Montagu"
 booking = Booking.new(start_date: "01/07/2019", end_date: "15/07/2019")
-booking.user = user_1
-booking.worksite = worksite_5
-booking.save
-
-booking = Booking.new(start_date: "01/08/2019", end_date: "31/08/2019")
-booking.user = user_1
-booking.worksite = worksite_5
-booking.save
-
-booking = Booking.new(start_date: "01/07/2019", end_date: "31/07/2019")
 booking.user = user_2
 booking.worksite = worksite_5
 booking.save
 
-booking = Booking.new(start_date: "01/07/2019", end_date: "15/07/2019")
-booking.user = user_3
+booking = Booking.new(start_date: "01/08/2019", end_date: "31/08/2019")
+booking.user = user_2
 booking.worksite = worksite_5
 booking.save
 
 booking = Booking.new(start_date: "01/07/2019", end_date: "31/07/2019")
-booking.user = user_4
+booking.user = user_3
 booking.worksite = worksite_5
+booking.save
+
+booking = Booking.new(start_date: "01/07/2019", end_date: "15/07/2019")
+booking.user = user_1
+booking.worksite = worksite_1
+booking.save
+
+booking = Booking.new(start_date: "01/07/2019", end_date: "31/07/2019")
+booking.user = user_1
+booking.worksite = worksite_1
 booking.save
