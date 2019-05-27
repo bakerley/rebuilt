@@ -16,6 +16,14 @@ class WorksitesController < ApplicationController
   end
 
   def create
+    @worksite = Worksite.new(worksite_params)
+    authorize @worksite
+    @worksite.user = current_user
+    if @worksite.save
+      redirect_to @worksite
+    else
+      render :new
+    end
   end
 
   def edit
@@ -39,7 +47,7 @@ class WorksitesController < ApplicationController
 
 private
 
-  def venue_params
+  def worksite_params
     params.require(:worksite).permit(:name, :address, :description, :user_id, :photo)
   end
 
