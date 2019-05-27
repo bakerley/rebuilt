@@ -1,2 +1,19 @@
-<h1>Worksites#edit</h1>
-<p>Find me in app/views/worksites/edit.html.erb</p>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12 col-sm-8  col-md-6">
+      <div class="form">
+        <h2 style="font-weight: 500; margin-bottom: 0px;">Modifier</h2>
+        <h2><%= @worksite.name %></h2>
+        <%= simple_form_for @worksite do |f| %>
+          <%= f.input :name, maxlength: 15 %>
+          <%= f.input :photo %>
+          <%= f.input :photo_cache, as: :hidden %>
+          <%= f.input :description, :input_html => {:rows => 5}  %>
+          <%= f.input :address %>
+          <%= f.submit "Modifier mon chantier", class: "btn btn-primary" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
