@@ -4,7 +4,7 @@
       <div class="form">
         <h2>Nouveau Chantier</h2>
         <%= simple_form_for @worksite do |f| %>
-          <%= f.input :name, maxlength: 15 %>
+          <%= f.input :name %>
           <%= f.input :photo %>
           <%= f.input :photo_cache, as: :hidden %>
           <%= f.input :description, :input_html => {:rows => 5}  %>

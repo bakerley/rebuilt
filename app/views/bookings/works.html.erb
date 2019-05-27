@@ -1,13 +1,15 @@
-<h1>My bookings</h1>
-<% @bookings.each do |booking| %>
-  <h2><%= booking.worksite.name %></h2>
-  <ul>
-    <li> du <%= booking.start_date %> au <%= booking.end_date %> </li>
-    <li>propriétaire : <%= booking.worksite.user.email %> </li>
-  </ul>
-  <%= link_to "modifier", edit_worksite_booking_path(booking.worksite, booking)  %>
-  <%= link_to "supprimer", worksite_booking_path(booking.worksite, booking),
-    method: :delete,
-    data: { confirm: "Êtes vous sûr de supprimer cette réservation?" }
-  %>
-<% end %>
+<div class="container">
+  <h1 class="text-center pt-5 mt-5 mb-5 ">Mes réservations</h1>
+  <% @bookings.each do |booking| %>
+    <h2><%= booking.worksite.name %></h2>
+    <ul>
+      <li> du <%= booking.start_date %> au <%= booking.end_date %> </li>
+      <li>propriétaire : <%= booking.worksite.user.email %> </li>
+    </ul>
+    <%= link_to "modifier", edit_worksite_booking_path(booking.worksite, booking)  %>
+    <%= link_to "supprimer", worksite_booking_path(booking.worksite, booking),
+      method: :delete,
+      data: { confirm: "Êtes vous sûr de supprimer cette réservation?" }
+    %>
+  <% end %>
+</div>
