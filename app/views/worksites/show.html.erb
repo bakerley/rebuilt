@@ -4,6 +4,9 @@
     <div class="description">
       <h1><%= @worksite.name %></h1>
       <p><%= @worksite.description %></p>
+      <p>
+        <%= link_to "Book", new_worksite_booking_path(@worksite), class: "btn btn-primary" unless policy(@worksite).edit? %>
+      </p>
     </div>
      <div
         id="map"
@@ -13,9 +16,6 @@
         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
       ></div>
     <div id="links">
-      <p>
-        <%= link_to "Book", new_worksite_booking_path(@worksite), class: "btn btn-primary" unless policy(@worksite).edit? %>
-      </p>
       <p>
         <%= link_to "Update", edit_worksite_path(@worksite) if policy(@worksite).edit? %>
       </p>

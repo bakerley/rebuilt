@@ -8,14 +8,14 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
     <% if user_signed_in? %>
-     <li class="nav-item active">
+     <li class="nav-item active item_sign">
         <a class="nav-link" href="/bookings">My bookings</a>
       </li>
-      <li class="nav-item active">
+      <li class="nav-item active item_sign">
         <a class="nav-link" href="#">My projects</a>
       </li>
-      <li class="nav-item active">
-            <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+      <li class="nav-item active item_sign">
+            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
       </li>
     <% else %>
       <li class="nav-item active">
