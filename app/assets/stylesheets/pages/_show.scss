@@ -59,3 +59,12 @@
   padding-right: 30px;
   margin: 0 auto;
 }
+
+#links {
+  display: flex;
+  justify-content: start;
+}
+
+#links .btn {
+  margin: 3px;
+}
