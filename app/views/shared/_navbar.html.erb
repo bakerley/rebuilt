@@ -1,5 +1,5 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <a class="navbar-brand" href="#">
+  <a class="navbar-brand" href="/">
     <img src="https://res.cloudinary.com/tootoon/image/upload/v1558710038/logo_rebuilt1_a37z8f.png" alt="logo" class="logo">
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -9,7 +9,7 @@
     <ul class="navbar-nav mr-auto">
     <% if user_signed_in? %>
      <li class="nav-item active">
-        <a class="nav-link" href="#">My bookings</a>
+        <a class="nav-link" href="/bookings">My bookings</a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="#">My projects</a>
@@ -19,10 +19,10 @@
       </li>
     <% else %>
       <li class="nav-item active">
-        <a class="nav-link" href="#">Sign In</a>
+        <a class="nav-link" href="<%= new_user_session_path %>">Sign In</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Sign up</a>
+        <a class="nav-link" href="<%= new_user_registration_path %>">Sign up</a>
       </li>
     <% end %>
     </ul>
