@@ -1,8 +1,8 @@
 class BookingsController < ApplicationController
-  before_action :set_worksite, only: [:index, :new, :create]
+  before_action :set_worksite, only: [:index, :new, :create, :edit, :update]
+
   def index
-    raise
-    @worksite = policy_scope(Booking)
+    authorize @worksite
     @bookings = @worksite.bookings
   end
 
@@ -16,9 +16,6 @@ class BookingsController < ApplicationController
     authorize @booking
   end
 
-  def edit
-  end
-
   def create
     @booking = Booking.new(bookings_params)
     authorize @booking
@@ -29,6 +26,18 @@ class BookingsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def edit
+    @booking = Booking.find(params[:id])
+    authorize @booking
+  end
+
+  def update
+    @booking = Booking.find(params[:id])
+    authorize @booking
+    @booking.update(bookings_params)
+    redirect_to my_bookings_path
   end
 
   def destroy
@@ -48,3 +57,4 @@ class BookingsController < ApplicationController
     @worksite = Worksite.find(params[:worksite_id])
   end
 end
+
