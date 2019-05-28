@@ -8,6 +8,9 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
     <% if user_signed_in? %>
+      <li class="nav-item active">
+        <a class="nav-link" href="<%= new_worksite_path %>">Proposer un projet</a>
+      </li>
      <li class="nav-item">
        <a class="nav-link" href="<%= worksites_path %>">Tous les projets</a>
      </li>

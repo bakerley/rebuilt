@@ -70,3 +70,51 @@
 .card-booking-button {
 }
 
+.card-product {
+  overflow: hidden;
+  height: 200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.card-product img {
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.card-product h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+}
+
+.card-product p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.card-product .card-product-infos {
+  padding: 16px;
+}
+
+.vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;                         /* White background */
+  padding: 30px;                             /* Internal space */
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.1);
+  height: 90%;
+}
+
