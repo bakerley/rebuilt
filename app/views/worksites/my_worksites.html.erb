@@ -1,14 +1,21 @@
-<h1>Les chantiers dont je suis propriétaire</h1>
+<div class="container mt-5">
+<h1 id="title-worksites" class="text-center">Mes chantiers</h1>
+
 <% @worksites.each do |worksite| %>
-  <h2><%= worksite.name %></h2>
-  <ul>
-    <% worksite.bookings.order(:start_date).each do |booking| %>
-      <li>
-        <p><%= booking.user.fullname %></p>
-        <p><%= "du #{booking.start_date} au  #{booking.end_date}" %></p>
-        <p><%= booking.user.email %></p>
-        <img src="<%= cl_image_path booking.user.photo, height: 100, width: 100, crop: :fill  %>" alt="avatar">
-      </li>
-    <% end %>
-  </ul>
+<h2 id="title-worksites" class="text-left"><%= worksite.name %></h2>
+<div class="card-product">
+  <% worksite.bookings.order(:start_date).each do |booking| %>
+  <div class= "vertical">
+    <div class="avatar">
+      <img src="<%= cl_image_path booking.user.photo, height: 100, width: 100, crop: :fill  %>" alt="avatar">
+    </div>
+    <div class="card-product-infos">
+      <h2><%= booking.user.fullname %></h2>
+      <p><%= "du #{booking.start_date} au  #{booking.end_date}" %></p>
+      <p><%= booking.user.email %></p>
+    </div>
+  </div>
+  <% end %>
+</div>
 <% end %>
+</div>

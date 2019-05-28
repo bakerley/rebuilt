@@ -3,9 +3,9 @@ require 'nokogiri'
 
 puts "Deleting db"
 # if Rails.env.development?
-  Booking.destroy_all
-  Worksite.destroy_all
-  User.destroy_all
+Booking.destroy_all
+Worksite.destroy_all
+User.destroy_all
 # end
 
 
