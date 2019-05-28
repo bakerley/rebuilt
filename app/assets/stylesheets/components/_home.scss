@@ -21,7 +21,7 @@
   opacity: 0.5;
  }
 
- .btn.btn-flat {
+.my-btn.btn-flat {
   background-color: #305f72;
   opacity: 0.9;
  }
@@ -49,11 +49,12 @@
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
-.btn-flat {
+.my-btn {
+  border: #305f72;
   color: white;
   padding: 8px 24px;
   border-radius: 4px;
-  background: #1EDD88;
+  background: #305f72;
   transition: background 0.3s ease;
 }
 
@@ -68,7 +69,8 @@
   padding-top: 0px;
 }
 
-.btn-flat:hover {
-  opacity: 0.8;
-  color: white;
+.my-btn:hover {
+  background-color: #EEEEFF;
+  // border: solid 1px #305f72;
+  color: #305f72;
 }
