@@ -8,18 +8,19 @@
 .description {
   background: white;                         /* White background */
   padding: 30px;                             /* Internal space */
-  border-radius: 4px;                        /* Small radius */
+  border-radius: 4px;
+  height: 100%;                       /* Small radius */
   box-shadow: 0 10px 30px rgba(0,0,0,.1);
 }
 
 #image_show {
-  height: 300px;
+  height: 100%;
   width: 100%;
   object-fit: cover;
 }
 
 .card-trip-infos h1 {
-  padding-top: 30px;
+  padding-top: 70px;
   padding-bottom: 30px;
   font-weight: bold;
 }
@@ -33,12 +34,12 @@
 .card-trip p {
   font-size: 12px;
   opacity: .7;
-  text-align: center;
+  text-align: justify;
 }
 
 
 .card-trip .card-trip-infos {
-  padding: 16px;
+  padding: 0;
 }
 
 .card-trip-infos .card-trip-user {
@@ -46,6 +47,10 @@
   right: 16px;
   top: -20px;
   width: 40px;
+}
+
+.calendar-book {
+  position: relative;
 }
 
 
@@ -67,4 +72,21 @@
 
 #links .btn {
   margin: 3px;
+}
+
+.card-image {
+  display: flex;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.1);
+}
+
+.map-calendar {
+  display: flex;
+  height: 400px;
+}
+
+.calendar-book {
+  width: 100%;
 }

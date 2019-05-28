@@ -1,9 +1,13 @@
 #map {
  width: 100%;
- height: auto;
+ height: 400px;
  object-fit: cover;
- background: white;                         /* White background */                            /* Internal space */
+ background: white;                     /* White background */                            /* Internal space */
  border-radius: 4px;
- margin-top: 20px;                        /* Small radius */
+ margin: 20px;                        /* Small radius */
  box-shadow: 0 10px 30px rgba(0,0,0,.1);
+}
+
+.mapboxgl-canvas {
+  height: 400px;
 }

@@ -23,6 +23,7 @@ class WorksitesController < ApplicationController
         lng: @worksite.longitude
       }]
 
+    @booking = Booking.new
   end
 
   def new

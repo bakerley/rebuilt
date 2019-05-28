@@ -4,6 +4,7 @@
   "dependencies": {
     "@rails/webpacker": "^4.0.2",
     "bootstrap": "^4.3.1",
+    "flatpickr": "^4.5.7",
     "jquery": "^3.4.1",
     "mapbox-gl": "^1.0.0",
     "popper.js": "^1.15.0"
