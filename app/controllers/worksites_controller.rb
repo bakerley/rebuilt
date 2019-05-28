@@ -5,7 +5,6 @@ class WorksitesController < ApplicationController
     @worksites = Worksite.where.not(latitude: nil, longitude: nil)
 
     if params[:query].present? && params[:query][:localisation].present?
-      raise
       @worksites = Worksite.near(params[:query][:localisation].split(',').first, 150)
     else
       @worksites = Worksite.all

@@ -1,1 +1,28 @@
-// Specific CSS for your home-page
+// Specific CSS for your home-p
+.vertical-center-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.vertical-center-content h1 {
+  color: white;
+}
+
+#big-container-home {
+  background-image: url(https://res.cloudinary.com/tootoon/image/upload/v1558710038/castle1_gn6p3l.jpg);
+  background-size: cover;
+  height: 100vh;
+}
+
+.algolia-places {
+  width: 800px;
+  margin: 20px;
+}
+
+.form-center {
+  display: flex;
+  align-items: center;
+}
