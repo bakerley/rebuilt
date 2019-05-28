@@ -4,9 +4,10 @@ class WorksitesController < ApplicationController
     @worksites = policy_scope(Worksite)
     @worksites = Worksite.where.not(latitude: nil, longitude: nil)
 
-    if params[:query][:localisation]
+    if params[:query][:localisation].present?
       @worksites = Worksite.near(params[:query][:localisation].split(',').first, 150)
-
+    else
+      @worksites = Worksite.all
     end
 
     @markers = @worksites.map do |worksite|
