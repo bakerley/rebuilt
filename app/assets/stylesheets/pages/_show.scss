@@ -1,4 +1,3 @@
-
 .card-trip {
   overflow: hidden;
   background: white;
@@ -7,7 +6,7 @@
 
 .description {
   background: white;                         /* White background */
-  padding: 30px;                             /* Internal space */
+  padding: 20px;                             /* Internal space */
   border-radius: 4px;
   height: 100%;                       /* Small radius */
   box-shadow: 0 10px 30px rgba(0,0,0,.1);
@@ -20,7 +19,7 @@
 }
 
 .card-trip-infos h1 {
-  padding-top: 70px;
+  padding-top: 50px;
   padding-bottom: 30px;
   font-weight: bold;
 }
@@ -80,11 +79,15 @@
   margin-right: 20px;
   border-radius: 4px;
   box-shadow: 0 10px 30px rgba(0,0,0,.1);
+  margin-top: 40px;
+  height: 300px;
 }
 
 .map-calendar {
   display: flex;
   height: 400px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .calendar-book {
