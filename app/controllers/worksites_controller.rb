@@ -3,14 +3,16 @@ class WorksitesController < ApplicationController
   def index
     @worksites = policy_scope(Worksite)
     @worksites = Worksite.where.not(latitude: nil, longitude: nil)
-
+    distance = 150
     if params[:query].present? && params[:query][:localisation].present?
-      raise
-      @worksites = Worksite.near(params[:query][:localisation].split(',').first, 150)
+      @worksites = Worksite.near(params[:query][:localisation].split(',').first, distance)
+      while @worksites.size < 3
+        distance += 50
+        @worksites = Worksite.near(params[:query][:localisation].split(',').first, distance)
+      end
     else
       @worksites = Worksite.all
     end
-
     @markers = @worksites.map do |worksite|
       {
         lat: worksite.latitude,
@@ -18,7 +20,11 @@ class WorksitesController < ApplicationController
         infoWindow: render_to_string(partial: "infowindow", locals: { worksite: worksite })
       }
     end
+  end
 
+  def my_worksites
+    @worksites = current_user.worksites
+    authorize @worksites
   end
 
   def show
