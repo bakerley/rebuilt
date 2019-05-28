@@ -1,6 +1,7 @@
 <div class="container">
   <h1 class="text-center pt-5 mt-5 mb-5 ">Mes réservations</h1>
   <% @bookings.each do |booking| %>
+    <div class="card card-works">
     <h2><%= booking.worksite.name %></h2>
     <ul>
       <li> du <%= booking.start_date %> au <%= booking.end_date %> </li>
@@ -11,5 +12,7 @@
       method: :delete,
       data: { confirm: "Êtes vous sûr de supprimer cette réservation?" }
     %>
+    </div>
   <% end %>
 </div>
+

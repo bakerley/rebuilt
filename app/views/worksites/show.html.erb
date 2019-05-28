@@ -1,28 +1,37 @@
 <div class="card-trip">
-  <img id="image_show" src="<%= cl_image_path @worksite.photo, height: 300, width: 400, crop: :fill %>" alt="Card image cap">
+  <div class="card-image">
+    <img id="image_show" src="<%= cl_image_path @worksite.photo, height: 300, width: 400, crop: :fill %>" alt="Card image cap">
   <div class="card-trip-infos container">
     <div class="description">
       <h1><%= @worksite.name %></h1>
       <p><%= @worksite.description %></p>
-      <div id="links">
+    <div class="links">
       <p>
         <%= link_to "Update", edit_worksite_path(@worksite), class: "btn btn-primary" if policy(@worksite).edit? %>
       </p>
       <p>
       <%= link_to "Delete", worksite_path(@worksite), class: "btn btn-primary", method: :delete if policy(@worksite).edit? %>
       </p>
-      <p>
-        <%= link_to "Book", new_worksite_booking_path(@worksite), class: "btn btn-primary" unless policy(@worksite).edit? %>
-      </p>
     </div>
     </div>
-     <div
-        id="map"
-        style="width: 100%;
-        height: 600px;"
-        data-markers="<%= @markers.to_json %>"
-        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-      ></div>
+    </div>
+  </div>
+  <div class="map-calendar">
+   <div
+      id="map"
+      style="width: 100%;
+      height: 600px;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+    ></div>
+    <div class="calendar-book">
+      <%= render 'shared/bookingform', worksite: @worksite, booking: @booking %>
+    </div>
   </div>
 </div>
+
+
+
+
+
 

@@ -10,8 +10,8 @@ const transparentNavbarFooter = () => {
     footer.classList.add("bg-transparent");
     footer.classList.add("position-fixed-bottom");
   } else {
-    pageContent.classList.add("pt-3");
-    pageContent.classList.add("pb-3");
+    pageContent.classList.add("pt-5");
+    pageContent.classList.add("pb-5");
     footer.classList.add("bg-primary");
   }
 }
