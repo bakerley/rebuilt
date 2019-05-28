@@ -1,0 +1,14 @@
+<h1>Les chantiers dont je suis propriétaire</h1>
+<% @worksites.each do |worksite| %>
+  <h2><%= worksite.name %></h2>
+  <ul>
+    <% worksite.bookings.order(:start_date).each do |booking| %>
+      <li>
+        <p><%= booking.user.fullname %></p>
+        <p><%= "du #{booking.start_date} au  #{booking.end_date}" %></p>
+        <p><%= booking.user.email %></p>
+        <img src="<%= cl_image_path booking.user.photo, height: 100, width: 100, crop: :fill  %>" alt="avatar">
+      </li>
+    <% end %>
+  </ul>
+<% end %>
