@@ -46,8 +46,9 @@
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
-  align-items: center;
-  text-justify: left;
+  padding: 16px;
+  margin-top: 8px;
+  justify-content: space-between;
 }
 
 
@@ -63,10 +64,9 @@
   opacity: .7;
   margin-bottom: 0;
   margin-top: 8px;
+  list-style: none;
 }
 
-.card-works {
-  padding: 16px;
-  margin-top: 8px;
+.card-booking-button {
 }
 
