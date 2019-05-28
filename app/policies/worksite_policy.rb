@@ -4,6 +4,10 @@ class WorksitePolicy < ApplicationPolicy
     true
   end
 
+  def my_worksites?
+        true
+  end
+
   def create?
     true
   end
