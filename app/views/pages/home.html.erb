@@ -1,22 +1,17 @@
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-      <div class="carousel-caption d-none d-md-block">
-        <h1>(Re)Build the World </h1>
-<!--         <form novalidate="novalidate" class="simple_form search" action="/" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
-          <div class="search-form-control form-group">
-            <input id="worksite_address" class="form-control string required" type="text" name="search[query]" id="search_query" placeholder="Find a place..." />
-            <button name="button" type="submit" class="btn btn-flat">
-              <i class="fas fa-search"></i> Search
-            </button>
-          </div>
-        </form> -->
-        <%= simple_form_for :query, url: worksites_path, method: :get do |f| %>
-          <%= f.input :localisation %>
-          <%= f.submit "Trouver", class: 'my-btn' %>
-        <% end %>
+
+<div id="big-container-home" class="vertical-center-container">
+  <div class="vertical-center-content text-center">
+    <h1>Adopte un château</h1>
+    <div class="form-center">
+      <div>
+      <%= simple_form_for :query, url: worksites_path, method: :get do |f| %>
+        <%= f.input :localisation, label: false, placeholder: "Trouve le château de tes rêves..." %>
       </div>
-    <div class="carousel-item active">
-      <img class="d-block w-100" src="https://res.cloudinary.com/tootoon/image/upload/v1558710038/castle1_gn6p3l.jpg" alt="First slide">
+        <div>
+        <%= f.submit "Trouver", class: 'my-btn' %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
+
