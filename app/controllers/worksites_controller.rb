@@ -2,11 +2,27 @@ class WorksitesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:show, :index]
   def index
     @worksites = policy_scope(Worksite)
+    @worksites = Worksite.where.not(latitude: nil, longitude: nil)
+
+    @markers = @worksites.map do |worksite|
+      {
+        lat: worksite.latitude,
+        lng: worksite.longitude,
+        infoWindow: render_to_string(partial: "infowindow", locals: { worksite: worksite })
+      }
+    end
   end
 
   def show
     @worksite = Worksite.find(params[:id])
     authorize @worksite
+
+    @markers =
+      [{
+        lat: @worksite.latitude,
+        lng: @worksite.longitude
+      }]
+
   end
 
   def new

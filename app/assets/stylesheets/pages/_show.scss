@@ -12,7 +12,7 @@
   box-shadow: 0 10px 30px rgba(0,0,0,.1);
 }
 
-.card-trip > img {
+#image_show {
   height: 300px;
   width: 100%;
   object-fit: cover;
@@ -33,23 +33,12 @@
 .card-trip p {
   font-size: 12px;
   opacity: .7;
-}
-
-.avatar-bordered {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  object-fit: cover;
-
+  text-align: center;
 }
 
 
 .card-trip .card-trip-infos {
   padding: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  position: relative;
 }
 
 .card-trip-infos .card-trip-user {
@@ -59,14 +48,6 @@
   width: 40px;
 }
 
-#map {
- width: auto;
- height: auto;
- object-fit: cover;
- background: white;                         /* White background */                            /* Internal space */
- border-radius: 4px;                        /* Small radius */
- box-shadow: 0 10px 30px rgba(0,0,0,.1);
-}
 
 .carte {
   text-align: center;
@@ -76,4 +57,14 @@
 .container {
   padding-left: 30px;
   padding-right: 30px;
+  margin: 0 auto;
+}
+
+#links {
+  display: flex;
+  justify-content: start;
+}
+
+#links .btn {
+  margin: 3px;
 }

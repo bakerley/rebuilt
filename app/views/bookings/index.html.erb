@@ -1,8 +1,7 @@
-
-<div class="container" style="border: solid 1px red">
+<div class="container mt-4 mb-4" style="border: solid 1px red">
+  <h2>Connaitre les gens qui travaillent sur mon chantier</h2>
   <%= @bookings.count %>
   <% @bookings.each do |booking| %>
     <%= booking.user.email %>
   <% end %>
-
 </div>

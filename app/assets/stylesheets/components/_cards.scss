@@ -3,7 +3,8 @@
   background-color: rgb(240, 240, 240)
 }
 
-h1 {
+#title-worksite h1 {
+  padding-top: 150px;
   text-align: center;
   font-family: 'Roboto', sans-serif;
   text-align : center;
@@ -11,10 +12,6 @@ h1 {
   color: rgb (50, 50, 50);
   padding-bottom: 50px;
   color: #305f72;
-}
-
-.container {
-text-align: center;
 }
 
 .cards {
@@ -28,10 +25,17 @@ text-align: center;
   padding: 30px;                             /* Internal space */
   border-radius: 4px;                        /* Small radius */
   box-shadow: 0 10px 30px rgba(0,0,0,.1);
+  text-align: center;
 }
-
 
 .card-body {
   color: white;
   font-family: 'Roboto', sans-serif;
+}
+
+.voir_plus_card {
+  border: 2px solid #305F72;
+  background-color: white;
+  margin-top: 4px;
+  border-radius: 10px;
 }
