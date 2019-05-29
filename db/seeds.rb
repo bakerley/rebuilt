@@ -61,24 +61,24 @@ url = "https://i.pinimg.com/564x/45/1a/63/451a63ab4c8f0d4b9f86df4df1033274.jpg"
 worksite_5.remote_photo_url = url
 worksite_5.save!
 
-puts "Creating worksites by scrapping rempart.fr"
+# puts "Creating worksites by scrapping rempart.fr"
 
-url = "https://www.rempart.com/participer-a-un-chantier/rechercher-chantier-benevoles-restauration-patrimoine/"
-html_doc = Nokogiri::HTML(open(url).read)
-urls = html_doc.search('.item a').map { |balise_a| balise_a.attribute('href').value }
+# url = "https://www.rempart.com/participer-a-un-chantier/rechercher-chantier-benevoles-restauration-patrimoine/"
+# html_doc = Nokogiri::HTML(open(url).read)
+# urls = html_doc.search('.item a').map { |balise_a| balise_a.attribute('href').value }
 
-urls.each do |url|
-  noko = Nokogiri::HTML(open(url).read)
-  img = noko.search('.side-photos img').attribute('src').value
-  name = noko.search('.articleBody h1').text
-  description = noko.search('#fiche p').children.first.text + noko.search('#fiche p').children[1].text
-  themes = noko.search('.themes p').children.text
-  address = noko.search('.situation h2').children.last.children.text
-  w = Worksite.new(name: name, description: description, address: address)
-  w.user = User.all.sample
-  w.remote_photo_url = img
-  w.save
-end
+# urls.each do |url|
+#   noko = Nokogiri::HTML(open(url).read)
+#   img = noko.search('.side-photos img').attribute('src').value
+#   name = noko.search('.articleBody h1').text
+#   description = noko.search('#fiche p').children.first.text + noko.search('#fiche p').children[1].text
+#   themes = noko.search('.themes p').children.text
+#   address = noko.search('.situation h2').children.last.children.text
+#   w = Worksite.new(name: name, description: description, address: address)
+#   w.user = User.all.sample
+#   w.remote_photo_url = img
+#   w.save
+# end
 
 
 puts "Creating 3 bookings in Atelier en ébénisterie and 2 in chateau de Montagu"
@@ -106,3 +106,11 @@ booking = Booking.new(start_date: "01/07/2019", end_date: "31/07/2019")
 booking.user = user_1
 booking.worksite = worksite_1
 booking.save
+
+10.times do
+  booking = Booking.new(start_date: Faker::Date.forward((1..10).to_a.sample), end_date: Faker::Date.forward((11..60).to_a.sample))
+  booking.user = User.all.sample
+  booking.worksite = Worksite.all.sample
+  booking.save
+end
+

@@ -1,5 +1,5 @@
 class WorksitesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:show, :index]
+  skip_before_action :authenticate_user!, only: :index
   def index
     @worksites = policy_scope(Worksite)
     @worksites = Worksite.where.not(latitude: nil, longitude: nil)
