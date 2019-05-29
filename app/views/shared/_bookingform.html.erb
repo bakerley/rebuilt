@@ -6,10 +6,10 @@
         <%= simple_form_for [worksite, booking] do |f| %>
           <div class="calendar-horizontal">
             <div class="start-date">
-              <%= f.input :start_date, :label => 'Date de début', as: :string, required: false, input_html: { id: "range_start"} %>
+              <%= f.input :start_date, :label => 'Début', as: :string, required: false, input_html: { id: "range_start"} %>
             </div>
             <div class="end-date">
-              <%= f.input :end_date, :label => 'Date de fin', as: :string, required: false, input_html: { id: "range_end"} %>
+              <%= f.input :end_date, :label => 'Fin', as: :string, required: false, input_html: { id: "range_end"} %>
             </div>
           </div>
           <%= f.submit "Réserver", class: "btn btn-primary my-4" %>
