@@ -7,7 +7,7 @@ class BookingsController < ApplicationController
   end
 
   def works
-    @bookings = Booking.where(user_id: current_user.id)
+    @bookings = Booking.where(user_id: current_user.id).order(:start_date)
     authorize @bookings
   end
 
