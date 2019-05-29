@@ -3,11 +3,10 @@
     <div class="col-12 col-sm-8  col-md-6">
       <div class="form">
         <h2 style="margin-bottom: 0px; font-weight: 500;"></h2>
-        <h2><%= @worksite.name %></h2>
-        <%= simple_form_for [worksite, booking] do |f| %>
-        <%= f.input :start_date, as: :string, required: false, input_html: { id: "range_start"} %>
-        <%= f.input :end_date, as: :string, required: false, input_html: { id: "range_end"} %>
-        <%= f.submit "Réserver", class: "btn btn-primary my-4" %>
+          <%= simple_form_for [worksite, booking] do |f| %>
+          <%= f.input :start_date, :label => 'Date de début', as: :string, required: false, input_html: { id: "range_start"} %>
+          <%= f.input :end_date, :label => 'Date de fin', as: :string, required: false, input_html: { id: "range_end"} %>
+          <%= f.submit "Réserver", class: "btn btn-primary my-4" %>
         <% end %>
       </div>
     </div>
