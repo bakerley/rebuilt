@@ -3,7 +3,7 @@ class BookingsController < ApplicationController
 
   def index
     authorize @worksite
-    @bookings = @worksite.bookings
+    @bookings = @worksite.bookings.order(:start_date)
   end
 
   def works
