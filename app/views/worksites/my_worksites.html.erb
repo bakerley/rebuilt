@@ -8,7 +8,10 @@
   </div>
   <div class="cards">
     <% worksite.bookings.order(:start_date).each do |booking| %>
-    <div class= "user-card">
+    <div class="user-card">
+      <div id="btn-flotting">
+        <%= link_to raw('<i class="far fa-trash-alt"></i>'), worksite_booking_path(worksite, booking), method: :delete, class: "btn btn-outline-secondary"  %>
+      </div>
       <div class="avatar">
         <img src="<%= cl_image_path booking.user.photo, height: 100, width: 100, crop: :fill  %>" alt="avatar">
       </div>
