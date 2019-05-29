@@ -129,8 +129,18 @@
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0,0,0,.1);
   height: 200px;
+  position: relative;
 }
 
 ul {
 padding-left: 0px;
+}
+
+#btn-flotting {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  .btn {
+    border: none;
+  }
 }
