@@ -1,37 +1,37 @@
 <div class="card-trip">
   <div class="card-image">
-    <img id="image_show" src="<%= cl_image_path @worksite.photo, height: 300, width: 400, crop: :fill %>" alt="Card image cap">
+    <img id="image_show" src="<%= cl_image_path @worksite.photo, height: 400, width: 400, crop: :fill %>" alt="Card image cap">
     <div class="description">
       <div>
-      <h1><%= @worksite.name %></h1>
-      <p><%= @worksite.description %></p>
+        <h1><%= @worksite.name %></h1>
+        <p><%= @worksite.description %></p>
       </div>
-    <div class="links">
-      <div class="link1">
-      <p>
-        <%= link_to "Mettre à jour", edit_worksite_path(@worksite), class: "btn btn-outline-primary" if policy(@worksite).edit? %>
-      </p>
-      </div>
-      <div>
-      <p>
-      <%= link_to "Supprimer", worksite_path(@worksite), class: "btn btn-outline-primary", method: :delete if policy(@worksite).edit? %>
-      </p>
-      </div>
+      <div class="links">
+        <div class="link1">
+          <p>
+            <%= link_to "Mettre à jour", edit_worksite_path(@worksite), class: "btn btn-outline-primary" if policy(@worksite).edit? %>
+          </p>
+        </div>
+        <div>
+          <p>
+            <%= link_to "Supprimer", worksite_path(@worksite), class: "btn btn-outline-primary", method: :delete if policy(@worksite).edit? %>
+          </p>
+        </div>
       </div>
     </div>
     <div class="calendar-book">
       <%= render 'shared/bookingform', worksite: @worksite, booking: @booking %>
     </div>
-    </div>
+  </div>
   <div class="map-calendar">
    <div
-      id="map"
-      style="width: 100%;
-      height: 600px;"
-      data-markers="<%= @markers.to_json %>"
-      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-    ></div>
-  </div>
+   id="map"
+   style="width: 100%;
+   height: 600px;"
+   data-markers="<%= @markers.to_json %>"
+   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+   ></div>
+ </div>
 </div>
 
 
