@@ -2,7 +2,10 @@
 <h1 id="title-worksites" class="text-center">Mes chantiers</h1>
 
 <% @worksites.each do |worksite| %>
+<div class="castle-header display: flex">
 <h2 id="title-worksites" class="text-left"><%= worksite.name %></h2>
+<a class="btn btn-primary" href="/worksites/<%= worksite.id %>">Gérer mon annonce</a>
+</div>
 <div class="card-product">
   <% worksite.bookings.order(:start_date).each do |booking| %>
   <div class= "vertical">
