@@ -7,35 +7,32 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-    <% if user_signed_in? %>
-      <li class="nav-item">
-        <a class="nav-link" href="<%= new_worksite_path %>">Proposer un projet |</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="<%= worksites_path %>">Tous les projets |</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <%= current_user.fullname %>
-          <%= cl_image_tag current_user.photo, height: 50, width: 50, crop: :fill, gravity: :face, class: 'rounded-circle', style: "height: 30px; width: 30px;" %>
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="nav-link" href="/my-bookings">Mes réservations</a>
-          <a class="nav-link" href="/my-worksites">Mes chantiers</a>
-          <%= link_to "Déconnexion", destroy_user_session_path, method: :delete, class: "nav-link" %>
-        </div>
-      </li>
-    <% else %>
       <li class="nav-item">
         <a class="nav-link" href="<%= worksites_path %>">Tous les projets |</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="<%= new_worksite_path %>">Proposer un projet |</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="<%= new_user_session_path %>">Connexion</a>
-      </li>
-    <% end %>
+      <% if user_signed_in? %>
+        <li class="nav-item">
+          <a class="nav-link" href="<%= new_worksite_path %>">Proposer un projet |</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <%= current_user.fullname %>
+            <%= cl_image_tag current_user.photo, height: 50, width: 50, crop: :fill, gravity: :face, class: 'rounded-circle', style: "height: 30px; width: 30px;" %>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="nav-link" href="/my-bookings">Mes réservations</a>
+            <a class="nav-link" href="/my-worksites">Mes chantiers</a>
+            <%= link_to "Déconnexion", destroy_user_session_path, method: :delete, class: "nav-link" %>
+          </div>
+        </li>
+      <% else %>
+        <li class="nav-item">
+          <a class="nav-link" href="<%= new_user_session_path %>">Connexion</a>
+        </li>
+      <% end %>
     </ul>
   </div>
 </div>

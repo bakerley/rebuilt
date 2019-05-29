@@ -5,7 +5,6 @@
 
 .description {                       /* White background */
   padding: 20px;                             /* Internal space */
-  height: 100%;
   width: 120vw;
   display: flex;
   flex-direction: column;
@@ -13,7 +12,7 @@
 }
 
 #image_show {
-  height: 100%;
+  min-height: 300px;
   width: 40vw;
   object-fit: cover;
 }
@@ -38,6 +37,7 @@
 
 .card-trip .card-trip-infos {
   padding: 0;
+  padding-bottom: 30px;
 }
 
 .card-trip-infos .card-trip-user {
@@ -75,7 +75,6 @@
   border-radius: 4px;
   box-shadow: 0 10px 30px rgba(0,0,0,.1);
   margin-top: 40px;
-  height: 60vh;
 }
 
 .map-calendar {

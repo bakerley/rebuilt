@@ -1,24 +1,24 @@
 <div class="container mt-5">
-<h1 id="title-worksites" class="text-center">Mes chantiers</h1>
+  <h1 id="title-worksites" class="text-center">Mes chantiers</h1>
 
-<% @worksites.each do |worksite| %>
-<div class="castle-header display: flex">
-<h2 id="title-worksites" class="text-left"><%= worksite.name %></h2>
-<a class="btn btn-primary" href="/worksites/<%= worksite.id %>">Gérer mon annonce</a>
-</div>
-<div class="card-product">
-  <% worksite.bookings.order(:start_date).each do |booking| %>
-  <div class= "vertical">
-    <div class="avatar">
-      <img src="<%= cl_image_path booking.user.photo, height: 100, width: 100, crop: :fill  %>" alt="avatar">
+  <% @worksites.each do |worksite| %>
+  <div class="castle-header d-flex justify-content-between">
+    <h2 id="title-worksites" class="text-left"><%= worksite.name %></h2>
+    <a class="btn btn-primary" href="/worksites/<%= worksite.id %>">Gérer mon annonce</a>
+  </div>
+  <div class="cards">
+    <% worksite.bookings.order(:start_date).each do |booking| %>
+    <div class= "user-card">
+      <div class="avatar">
+        <img src="<%= cl_image_path booking.user.photo, height: 100, width: 100, crop: :fill  %>" alt="avatar">
+      </div>
+      <div class="user-card-infos">
+        <h2><%= booking.user.fullname %></h2>
+        <p><%= "du #{booking.start_date.strftime("%d/%m/%Y")} au  #{booking.end_date.strftime("%d/%m/%Y")}" %></p>
+        <p><%= booking.user.email %></p>
+      </div>
     </div>
-    <div class="card-product-infos">
-      <h2><%= booking.user.fullname %></h2>
-      <p><%= "du #{booking.start_date} au  #{booking.end_date}" %></p>
-      <p><%= booking.user.email %></p>
-    </div>
+    <% end %>
   </div>
   <% end %>
-</div>
-<% end %>
 </div>
