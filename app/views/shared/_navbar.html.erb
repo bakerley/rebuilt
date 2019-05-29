@@ -9,26 +9,26 @@
     <ul class="navbar-nav mr-auto">
     <% if user_signed_in? %>
       <li class="nav-item active">
-        <a class="nav-link" href="<%= new_worksite_path %>">Proposer un projet</a>
+        <a class="nav-link" href="<%= new_worksite_path %>">Proposer un projet |</a>
       </li>
      <li class="nav-item">
-       <a class="nav-link" href="<%= worksites_path %>">Tous les projets</a>
+       <a class="nav-link" href="<%= worksites_path %>">Tous les projets |</a>
      </li>
      <li class="nav-item active item_sign">
-        <a class="nav-link" href="/bookings">Mes chantiers à venir</a>
+        <a class="nav-link" href="/bookings">Mes chantiers à venir |</a>
       </li>
       <li class="nav-item active item_sign">
-        <a class="nav-link" href="/my-worksites">Mes propriétés</a>
+        <a class="nav-link" href="/my-worksites">Mes propriétés |</a>
       </li>
       <li class="nav-item active item_sign">
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
       </li>
     <% else %>
       <li class="nav-item">
-        <a class="nav-link" href="<%= worksites_path %>">Tous les projets</a>
+        <a class="nav-link" href="<%= worksites_path %>">Tous les projets |</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="<%= new_worksite_path %>">Proposer un projet</a>
+        <a class="nav-link" href="<%= new_worksite_path %>">Proposer un projet |</a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="<%= new_user_session_path %>">Connexion</a>
